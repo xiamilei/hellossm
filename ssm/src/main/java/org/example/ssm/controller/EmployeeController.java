@@ -28,6 +28,7 @@ public class EmployeeController {
 
     @GetMapping("employee/page/{pagenum}")
     public String getEmployeePage(@PathVariable("pagenum") Integer pagenum,Model model){
+        System.out.println("更新1");
         //获取员工的分页信息
         PageInfo<Employee> page = employeeService.getEmployeePage(pagenum);
         //将分页数据共享到请求域中
